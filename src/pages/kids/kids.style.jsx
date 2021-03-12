@@ -1,28 +1,53 @@
 import styled from 'styled-components';
 
-import { colors, device, secondaryFont } from '../../styled' 
+import { colors, device, primaryFont, secondaryFont } from '../../styled' 
 
 const Container = styled.div`
-    height: 100vh;
-    overflow: hidden;
+    position: relative;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    @media ${device.tablet} {
-            justify-content: space-space-around;
+`;
+
+const Header = styled.header`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 12rem;
+    width: 100%;
+    margin-top: 2rem;
+    font-family: ${secondaryFont};
+    color: ${colors.blue};
+
+    .header-kicker {
+        margin: 1.2rem 0.9rem 0.3rem 0.9rem;
+        font-weight: 100;
+        font-size: 1.2rem;
+        @media ${device.tablet} {
+            font-size: 1.8rem;
+        }
+    }
+    .header-title {
+        margin: 0 0.9rem 0.2rem 0.9rem;
+        font-weight: 100;
+        font-size: 1.8rem;
+        @media ${device.tablet} {
+            font-size: 2.5rem;
+        }
     }
 `;
 
 const Main = styled.main`
-    width: 100%;
+    height: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    @media ${device.tablet} {
-            flex-direction: row-reverse;
-    }
+    margin-bottom: 2rem;
 `;
 
 const TextSection = styled.section`
@@ -36,50 +61,6 @@ const TextSection = styled.section`
     }
 `;
 
-const Header = styled.header`
-    height: 8rem;
-    width: 100%;
-    background-color: ${colors.neutral_light};
-    font-family: ${secondaryFont};
-    color: ${colors.blue};
-    @media ${device.tablet} {
-        background-color: ${colors.neutral_medium};
-    }
-
-    .header-kicker {
-        margin: 1.2rem 0.9rem 0.3rem 0.9rem;
-        font-weight: 100;
-        font-size: 1.25rem;
-        @media ${device.tablet} {
-            font-size: 1.8rem;
-        }
-    }
-    .header-title {
-        margin: 0 0.9rem 0.2rem 0.9rem;
-        font-size: 1.9rem;
-        @media ${device.mobile} {
-            font-size: 1.8rem;
-        }
-        @media ${device.tablet} {
-            font-size: 2rem;
-        }
-        @media ${device.laptop_small} {
-            font-size: 2.3rem;
-        }
-    }
-    .header-subtitle {
-        font-size: 1.5rem;
-        margin: 0 0.9rem 0.8rem 0.9rem;
-        color: ${colors.blue_medium};
-        font-weight: 100;
-        @media ${device.mobile} {
-            font-size: 1.3rem;
-        }
-        @media ${device.tablet} {
-            font-size: 1.7rem;
-        }
-    }
-`;
 
 const TextContainer = styled.div`
     display: flex;

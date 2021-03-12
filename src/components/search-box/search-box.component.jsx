@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './search-box.styles.css';
+import { InputField } from './search-box.styles';
 
 const SearchBox = ({ placeholder, onChange }) => (
-  <input placeholder={placeholder} onChange={onChange} />
+  <InputField placeholder={placeholder} onChange={onChange} />
 )
 
 export { SearchBox };

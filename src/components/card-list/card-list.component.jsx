@@ -1,14 +1,14 @@
 import React from 'react';
 import { CardWithRouter } from '../card/card.component';
 
-import './card-list.styles.css';
+import { ListContainer } from './card-list.styles';
 
 const CardList = props => (
-  <div className='card-list'>
+  <ListContainer className='card-list'>
     {props.places.map(place => (
-      <CardWithRouter key={place.id} place={place}/>
+      <CardWithRouter key={place.id} place={place} />
     ))}
-  </div>
+  </ListContainer>
 );
 
 export { CardList };

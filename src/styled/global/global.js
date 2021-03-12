@@ -5,7 +5,6 @@ const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-    max-height: 100vh;
     max-width: 100vw;
     font-size: 16px;
     @media ${device.laptop_large} {
