@@ -1,0 +1,1 @@
+export { useIconSelector } from './useIconSelector/useIconSelector';

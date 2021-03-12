@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 import { CardContainer, CardBody, IconContainer, Icon, TitleContainer, Title, Footer } from './card.styles.jsx';
-import park from '../../assets/icons/park.svg';
+import { useIconSelector } from '../../hooks';
 
 const Card = ({ type, place, history }) => {
 
@@ -10,7 +10,7 @@ const Card = ({ type, place, history }) => {
   <CardContainer className='card-container' onClick={() => history.push(`Places/${place.id}`)}>
     <CardBody>
       <IconContainer>
-        <Icon src={park} alt={type} />
+        <Icon src={useIconSelector(place.nombre.toLowerCase())} alt={type} />
       </IconContainer>
       <TitleContainer>
         <Title> {place.nombre.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(' ')} </Title>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, secondaryFont, device } from '../../styled'
+import { colors } from '../../styled'
 
 const CardContainer = styled.div`
   width: 100%;

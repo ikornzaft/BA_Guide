@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors, device, primaryFont, secondaryFont } from '../../styled' 
+import { colors, device, secondaryFont } from '../../styled' 
 
 const Container = styled.div`
     position: relative;

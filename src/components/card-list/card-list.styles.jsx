@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { device } from '../../styled'
-
 const ListContainer = styled.div`
   width: 80%;
   margin: 2rem;
