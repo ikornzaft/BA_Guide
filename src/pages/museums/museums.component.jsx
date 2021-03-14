@@ -1,23 +1,42 @@
 import React, { useState, useEffect } from 'react';
 
-import { CardList, SearchBox } from '../../components'
+import { Container, Header, Main } from './museums.style';
+import { CardList, SearchBox, Footer, BackButtonWithRouter } from '../../components'
 
 const searchString = "https://epok.buenosaires.gob.ar/buscar?texto=Museo"
 
 const Museums = () => {
     const [places, fetchedPlaces] = useState([]);
+    const [placesList, filteredPlaces] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
     
     useEffect(() => {
-        fetch(searchString)
-          .then(response => response.json())
-          .then(places => fetchedPlaces( places.instancias ));
-    });
+        const fetchFunc = async () => {
+            const response = await fetch(searchString);
+            const resJson = await response.json();
+            fetchedPlaces(resJson.instancias);
+            filteredPlaces(resJson.instancias);
+        };
+        fetchFunc();
+    }, []);
     
+    useEffect(() => {
+        searchQuery ? filteredPlaces(places.filter(place => place.nombre.toLowerCase().includes(searchQuery.toLowerCase()))) : filteredPlaces(places)
+    }, [searchQuery]);
+
     return (
-        <div>
-            <h1>Museums</h1>
-            <CardList places={places} />
-        </div>
+        <Container>
+            <BackButtonWithRouter text="Back To Homepage" />
+            <Header>
+                <h2 className="header-kicker">Buenos Aires City's</h2>
+                <h1 className="header-title">MUSEUMS</h1>
+                <SearchBox type="search" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} placeholder="Search location" />
+            </Header>
+            <Main>
+                <CardList places={placesList} />
+            </Main>
+            <Footer />
+        </Container>
     );
 } 
   

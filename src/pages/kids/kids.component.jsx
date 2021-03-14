@@ -5,7 +5,7 @@ import { CardList, SearchBox, Footer, BackButtonWithRouter } from '../../compone
 
 const searchString = "https://epok.buenosaires.gob.ar/buscar?texto=chicos&clase=actividades_para_chicos%7C1"
 
-const Kids = (match, history) => {
+const Kids = () => {
     const [places, fetchedPlaces] = useState([]);
     const [placesList, filteredPlaces] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
