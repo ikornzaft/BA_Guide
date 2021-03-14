@@ -1,27 +1,26 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
 import { CardContainer, CardBody, IconContainer, Icon, TitleContainer, Title, Footer } from './card.styles.jsx';
-import { useIconSelector } from '../../hooks';
+import { useIconSelector, useFormatNameString } from '../../hooks';
+import { InfoButton } from '../';
 
-const Card = ({ type, place, history }) => {
+const Card = ({ type, place }) => {
 
   return (
-  <CardContainer className='card-container' onClick={() => history.push(`Places/${place.id}`)}>
-    <CardBody>
-      <IconContainer>
-        <Icon src={useIconSelector(place.nombre.toLowerCase())} alt={type} />
-      </IconContainer>
-      <TitleContainer>
-        <Title> {place.nombre.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(' ')} </Title>
-      </TitleContainer>
-    </CardBody>
-    <Footer>
-    </Footer>
-  </CardContainer>
-  )
-};
-
-const CardWithRouter = withRouter(Card);
-
-export { CardWithRouter };
+    <CardContainer className='card-container'>
+      <CardBody>
+        <IconContainer>
+          <Icon src={useIconSelector(place.nombre.toLowerCase())} alt={type} />
+        </IconContainer>
+        <TitleContainer>
+          <Title> {useFormatNameString(place.nombre)} </Title>
+        </TitleContainer>
+      </CardBody>
+      <Footer>
+      <InfoButton location={place.id} text="+ Info">Info</InfoButton>
+      </Footer>
+    </CardContainer>
+    )
+  };
+    
+export { Card };

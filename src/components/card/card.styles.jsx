@@ -34,15 +34,23 @@ const Icon = styled.img`
 `;
 
 const TitleContainer = styled.div`
-  
+  width: 65%;
+  padding: 0.9rem 1rem 1rem 0;
+  text-align: left;
 `;
 
 const Title = styled.div`
-  
+  color: ${colors.blue};
+  font-size: 1.1rem;
+  font-weight: 500;
 `;
 
 const Footer = styled.div`
-  
+  height: 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
 `;
 
 export { CardContainer, CardBody, IconContainer, Icon, TitleContainer, Title, Footer };

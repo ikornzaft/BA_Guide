@@ -7,7 +7,7 @@ const ListContainer = styled.div`
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(auto-fill, 16rem);
-  grid-auto-rows: 10rem;
+  grid-auto-rows: 9rem;
   grid-gap: 2rem;
 `;
 

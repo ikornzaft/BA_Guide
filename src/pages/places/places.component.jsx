@@ -4,6 +4,7 @@ import { MapComponent } from '../../components';
 import './places.styles.css';
 
 const Places = ({ match, history }) => {
+    console.log(history, match);
     const searchString = `https://epok.buenosaires.gob.ar/getObjectContent?id=${match.params.id}`;
 
     const [place, fetchedPlace] = useState(null);
@@ -36,7 +37,6 @@ const Places = ({ match, history }) => {
         };
     }, [placeData]);
 
-    console.log(coordinates);
 
     return (
         <div>

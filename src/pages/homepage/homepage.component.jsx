@@ -26,7 +26,7 @@ const HomePage = () => (
                     </article>
                 </TextContainer>
                 <ButtonContainer>
-                    <GenericButtonWithRouter className="primary" text="Learn More" name="Info" />
+                    <GenericButtonWithRouter text="Learn More" name="Info" />
                 </ButtonContainer>
             </TextSection>
             <IconsContainer>
