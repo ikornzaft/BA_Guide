@@ -22,18 +22,9 @@ const Container = styled.div`
         height: 10rem;
         width: 10rem;
     }
-    @media ${device.laptop_small} {
-        margin-bottom: 0;
-        height: 11rem;
-        width: 11rem;
-        border-width: 6px;
-        left: ${props => props.positionx}rem;
-        top: ${props => props.positiony}rem;
-    }
 `;
 
 const Image = styled.div`
-    // position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 50%;
