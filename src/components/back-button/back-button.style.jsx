@@ -24,6 +24,14 @@ const Container = styled.div`
         width: 9.5rem;
         border-radius: 10px;
     }
+    &.scrolled {
+        @media ${device.tablet} {
+        top: 1rem;
+        left: 2rem;
+        width: 9.5rem;
+        border-radius: 10px;
+        }
+    }
     &:hover {
         transition: background-color 0.5s;
         background-color: ${colors.blue_medium};

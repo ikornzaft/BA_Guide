@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { reduceEachLeadingCommentRange } from 'typescript';
 
 import { colors, device, secondaryFont } from '../../styled' 
 
@@ -23,7 +24,16 @@ const Header = styled.header`
     margin-top: 2rem;
     font-family: ${secondaryFont};
     color: ${colors.blue};
-
+    
+    &.scrolled{
+        position: fixed;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        margin-top:0;
+        height: 4rem;
+        background-color: ${colors.blue_light};
+    }
     .header-kicker {
         margin: 1.2rem 0.9rem 0.3rem 0.9rem;
         font-weight: 100;
@@ -41,6 +51,7 @@ const Header = styled.header`
         }
     }
 `;
+
 
 const Main = styled.main`
     height: auto;
