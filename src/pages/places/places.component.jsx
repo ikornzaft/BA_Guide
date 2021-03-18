@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { MapComponent } from '../../components';
+import { MapComponent, BackButtonWithRouter, PlaceData, Footer } from '../../components';
 
-import './places.styles.css';
+import { Main, Container, Header, Title, Address, DataContainer } from './places.styles.jsx';
 
 const Places = ({ match, history }) => {
     console.log(history, match);
@@ -37,16 +37,21 @@ const Places = ({ match, history }) => {
         };
     }, [placeData]);
 
-
     return (
-        <div>
-            <button onClick={() => history.goBack()}>Back to the list</button>
-            <h1>Places</h1>
-            <p>Nombre: {placeData[0]}</p>
-            <p>Coordenadas: {placeData[4]}</p>
-            <p>Dirección: {placeData[5]}</p>
-            {(coordinates) ? <MapComponent coordinates={coordinates} text={placeData[0]}/> : null}
-        </div>
+        <Main>
+            <Container>
+                <BackButtonWithRouter text="Back To List"/>
+                <Header>
+                    <Title>{placeData[0]}</Title>
+                    <Address>{placeData[5]}</Address>
+                </Header>
+                <DataContainer>
+                    <PlaceData phone={placeData[1]} email={placeData[2]} web={placeData[3]} />
+                    {(coordinates) ? <MapComponent coordinates={coordinates} text={placeData[0]}/> : null}
+                </DataContainer>
+            </Container>
+            <Footer/>
+        </Main>
     );
 };
 

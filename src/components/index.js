@@ -9,4 +9,5 @@ export { MapComponent } from './map/map.component';
 export { InfoPanel } from './info-panel/info-panel.component';
 export { InfoPanelButton } from './info-panel-button/info-panel-button.component';
 export { Header } from './header/header.component';
+export { PlaceData } from './place-data/place-data.component';
 export { Footer } from './footer/footer.component';
