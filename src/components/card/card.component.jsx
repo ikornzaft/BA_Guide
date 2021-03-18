@@ -4,16 +4,16 @@ import { CardContainer, CardBody, IconContainer, Icon, TitleContainer, Title, Fo
 import { useIconSelector, useFormatNameString } from '../../hooks';
 import { InfoButton } from '../';
 
-const Card = ({ type, place }) => {
-
+const Card = ({ page, type, place }) => {
+  console.log(place);
   return (
-    <CardContainer className='card-container'>
-      <CardBody>
+    <CardContainer className={page}>
+      <CardBody className={page}>
         <IconContainer>
           <Icon src={useIconSelector(place.nombre.toLowerCase())} alt={type} />
         </IconContainer>
         <TitleContainer>
-          <Title> {useFormatNameString(place.nombre)} </Title>
+          <Title className={page}> {useFormatNameString(place.nombre)} </Title>
         </TitleContainer>
       </CardBody>
       <Footer>

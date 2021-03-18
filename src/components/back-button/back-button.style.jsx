@@ -25,11 +25,13 @@ const Container = styled.div`
         border-radius: 10px;
     }
     &.scrolled {
+        top: 0.2rem;
         @media ${device.tablet} {
+        position: relative; 
         top: 1rem;
         left: 2rem;
-        width: 9.5rem;
-        border-radius: 10px;
+        width: 5.5rem;
+        min-width: 5.5rem;
         }
     }
     &:hover {
@@ -47,6 +49,11 @@ const Text = styled.h3`
     @media ${device.tablet} {
         display: inline;
         font-size: 1rem;
+    }
+    &.scrolled {
+        @media ${device.tablet} {
+        font-size: 0.6rem;
+        }
     }
 `;
 

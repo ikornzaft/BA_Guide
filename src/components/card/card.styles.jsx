@@ -8,6 +8,12 @@ const CardContainer = styled.div`
   background-color: ${colors.green_medium};
   border-radius: 10px;
   overflow: hidden;
+  &.kids {
+    background-color: ${colors.pink_dark};
+  };
+  &.museums {
+    background-color: ${colors.blue};
+  };
 `;
 
 const CardBody = styled.div`
@@ -18,6 +24,12 @@ const CardBody = styled.div`
   justify-content: space-between;
   text-align: left;
   background-color: ${colors.blue_medium};
+  &.kids {
+    background-color: ${colors.pink_light};
+  };
+  &.museums {
+    background-color: ${colors.grey_light};
+  };
 `;
 
 const IconContainer = styled.div`
@@ -43,6 +55,12 @@ const Title = styled.div`
   color: ${colors.blue};
   font-size: 1.1rem;
   font-weight: 500;
+  &.kids {
+    color: ${colors.neutral_light};
+  };
+  &.museums {
+    color: ${colors.neutral_light};
+  };
 `;
 
 const Footer = styled.div`

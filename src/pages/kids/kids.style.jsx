@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { reduceEachLeadingCommentRange } from 'typescript';
 
 import { colors, device, secondaryFont } from '../../styled' 
 

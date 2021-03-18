@@ -16,6 +16,14 @@ const InputField = styled.input`
   @media ${device.tablet} {
     width: 16rem;
   }
+  &.scrolled {
+    height: 0.3rem;
+    width: 9rem;
+    font-size: 0.9rem;
+    &:focus {
+    background-color: ${colors.neutral_medium};
+  }
+  }
   &:focus {
     background-color: ${colors.blue_light};
   }

@@ -10,10 +10,7 @@ const Kids = () => {
     const [placesList, filteredPlaces] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
 
-
-
     const updateSearchQuery = (input) => setSearchQuery(input);
-
     
     useEffect(() => {
         const fetchFunc = async () => {
@@ -29,18 +26,15 @@ const Kids = () => {
         searchQuery ? filteredPlaces(places.filter(place => place.nombre.toLowerCase().includes(searchQuery.toLowerCase()))) : filteredPlaces(places)
     }, [searchQuery]);
 
-
-
     return (
         <Container>
-        <Header searchQuery={searchQuery} updateSearchQuery={updateSearchQuery} />
-
+        <Header searchQuery={searchQuery} updateSearchQuery={updateSearchQuery} kicker="Great Places To" title="VISIT WITH KIDS"/>
             <Main>
-                <CardList places={placesList} />
+                <CardList page="kids" places={placesList} />
             </Main>
             <Footer />
         </Container>
     );
-}
+};
 
 export { Kids };

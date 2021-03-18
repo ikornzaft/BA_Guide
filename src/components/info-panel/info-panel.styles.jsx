@@ -6,7 +6,7 @@ const Container = styled.div`
   height: 70%;
   position: absolute;
   left: 15%;
-  top: 15%;
+  top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

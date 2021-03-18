@@ -15,10 +15,10 @@ const Header = (props) => {
 
     return (
         <Container className={scrolled ? 'navbar scrolled' : 'navbar'}>
-            <BackButtonWithRouter text="Back To Homepage" />
-            <h2 className="header-kicker">Great Places To</h2>
-            <h1 className="header-title">VISIT WITH KIDS</h1>
-            <SearchBox type="search" value={props.searchQuery} onChange={e => props.updateSearchQuery(e.target.value)} placeholder="Search location" />
+            <BackButtonWithRouter scroll={scrolled ? 'back-button scrolled' : 'back-button'} text="Back To Homepage" />
+            <h2 className="header-kicker">{props.kicker}</h2>
+            <h1 className="header-title">{props.title}</h1>
+            <SearchBox scroll={scrolled ? 'back-button scrolled' : 'back-button'} type="search" value={props.searchQuery} onChange={e => props.updateSearchQuery(e.target.value)} placeholder="Search location" />
         </Container>
     );
 }
