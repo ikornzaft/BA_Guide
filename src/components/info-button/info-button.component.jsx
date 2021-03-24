@@ -6,7 +6,6 @@ import { Container, Text } from './info-button.styles';
 const InfoButton = ({ text, location }) => {
     let history = useHistory();
     const handleClick = () => {
-      console.log('click');
       history.push(`Places/${location}`)
     };
     return (

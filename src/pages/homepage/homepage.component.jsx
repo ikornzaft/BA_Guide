@@ -34,11 +34,11 @@ const HomePage = () => {
                 <IconsContainer>
                     <MapImage src={map} alt="Buenos Aires City Map" />
                     <LeftIconsContainer>
-                        <PageMenuItemWithRouter positionx="0" positiony="0" image={iconMuseums} name="Museums" />
-                        <PageMenuItemWithRouter positionx="0" positiony="0" image={iconParks} name="Parks" />
+                        <PageMenuItemWithRouter image={iconMuseums} name="Museums" />
+                        <PageMenuItemWithRouter image={iconParks} name="Parks" />
                     </LeftIconsContainer>
                     <RightIconsContainer>
-                        <PageMenuItemWithRouter positionx="0" positiony="0" image={iconKids} name="Kids" />
+                        <PageMenuItemWithRouter image={iconKids} name="Kids" />
                     </RightIconsContainer>
                 </IconsContainer>
             </Main>
@@ -48,8 +48,3 @@ const HomePage = () => {
 };
 
 export { HomePage };
-
-// <span>Photo by <a href="https://unsplash.com/@dannie_jing?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Dannie Jing</a> on <a href="https://unsplash.com/s/photos/museum?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-// <span>Photo by <a href="https://unsplash.com/@gunnarridder?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Gunnar Ridderström</a> on <a href="https://unsplash.com/s/photos/park?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-// <span>Photo by <a href="https://unsplash.com/@shs521?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Susan Holt Simpson</a> on <a href="https://unsplash.com/s/photos/wooden-blocks?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-// <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

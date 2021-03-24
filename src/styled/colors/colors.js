@@ -13,5 +13,4 @@ const colors = {
     pink_dark: "#C08B94"
 }
 
-
 export { colors };

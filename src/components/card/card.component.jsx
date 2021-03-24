@@ -5,7 +5,6 @@ import { useIconSelector, useFormatNameString } from '../../hooks';
 import { InfoButton } from '../';
 
 const Card = ({ page, type, place }) => {
-  console.log(place);
   return (
     <CardContainer className={page}>
       <CardBody className={page}>

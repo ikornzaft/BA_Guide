@@ -18,7 +18,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding-top: 4.5rem;
+    padding-top: 5rem;
     .leaflet-container {
         width: 30rem;
         height: 20rem;
@@ -35,7 +35,7 @@ const Title = styled.h1`
     font-family: ${secondaryFont};
     font-weight: 700;
     font-size: 2rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.8rem;
 `;
 
 const Address = styled.h2`
@@ -43,7 +43,7 @@ const Address = styled.h2`
     font-family: ${secondaryFont};
     font-weight: 100;
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
 `;
 
 const DataContainer = styled.div`
@@ -53,6 +53,7 @@ const DataContainer = styled.div`
     justify-content: space-evenly;
     align-items: center;
     background-color: ${colors.neutral_light};
+    border-radius: 10px;
 `;
 
 const Data = styled.div`

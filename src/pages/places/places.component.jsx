@@ -4,7 +4,6 @@ import { MapComponent, BackButtonWithRouter, PlaceData, Footer } from '../../com
 import { Main, Container, Header, Title, Address, DataContainer } from './places.styles.jsx';
 
 const Places = ({ match, history }) => {
-    console.log(history, match);
     const searchString = `https://epok.buenosaires.gob.ar/getObjectContent?id=${match.params.id}`;
 
     const [place, fetchedPlace] = useState(null);
