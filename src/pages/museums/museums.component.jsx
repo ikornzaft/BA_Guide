@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 import { useFetch } from '../../hooks';
-import { Container, Main } from './museums.style';
-import { CardList, Footer, Header } from '../../components'
+import { Container, Main, ErrorImage } from './museums.style';
+import { CardList, Footer, Header, Loader } from '../../components'
 
+import wrong from '../../assets/img/Something-Went-Wrong.svg';
 
 const Museums = () => {
     const searchString = "https://epok.buenosaires.gob.ar/buscar?texto=Museo";
@@ -20,8 +21,8 @@ const Museums = () => {
         <Container>
             <Header searchQuery={searchQuery} updateSearchQuery={updateSearchQuery} kicker="Buenos Aires City's" title="MUSEUMS"/>
             <Main>
-                {res.loading ? <p>Loading ... </p> : null}
-                {res.error ? <p>ERROR</p> : null}
+                {res.loading ? <Loader /> : null}
+                {res.error ? <ErrorImage src={wrong} alt="Something went wrong" /> : null}
                 {res.places ? <CardList page="museums" places={filteredPlaces ? filteredPlaces : res.places} /> : null}
             </Main>
             <Footer />

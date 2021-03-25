@@ -12,6 +12,7 @@ const Container = styled.div`
     margin-top: 2rem;
     font-family: ${secondaryFont};
     color: ${colors.blue};
+    z-index: 90;
     
     .header-kicker {
         margin: 1.2rem 0.9rem 0.3rem 0.9rem;

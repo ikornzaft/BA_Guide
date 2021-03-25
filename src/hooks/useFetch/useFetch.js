@@ -8,6 +8,7 @@ const useFetch = (url, options) => {
         const fetchData = async () => {
             try {
                 const response = await fetch(url, options);
+                if (response.status >= 400 && response.status < 600) setError('Bad response from server');
                 const resJson = await response.json();
                 setPlaces(resJson.instancias);
             } catch(err) {
@@ -17,7 +18,7 @@ const useFetch = (url, options) => {
             }
         };
         fetchData();
-    }, []);
+    }, [places, loading, error]);
     return { places, error, loading };
 };
 

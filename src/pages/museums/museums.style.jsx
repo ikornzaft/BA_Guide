@@ -132,4 +132,10 @@ const MapImage = styled.img`
     }
 `;
 
-export { Container, Main, TextSection, Header, IconsContainer, TextContainer, ButtonContainer, MapImage, LeftIconsContainer, RightIconsContainer };
+const ErrorImage = styled.img`
+  width: 25rem;
+  height: 25rem;
+`;
+
+
+export { Container, Main, TextSection, Header, IconsContainer, TextContainer, ButtonContainer, MapImage, LeftIconsContainer, RightIconsContainer, ErrorImage };

@@ -11,3 +11,4 @@ export { InfoPanelButton } from './info-panel-button/info-panel-button.component
 export { Header } from './header/header.component';
 export { PlaceData } from './place-data/place-data.component';
 export { Footer } from './footer/footer.component';
+export { Loader } from './loader/loader.component';
