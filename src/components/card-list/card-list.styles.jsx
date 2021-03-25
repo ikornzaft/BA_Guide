@@ -22,5 +22,4 @@ const Pic = styled.img`
   
 `;
 
-
 export { ListContainer, Pic };
