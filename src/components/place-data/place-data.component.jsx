@@ -3,23 +3,17 @@ import parse from 'html-react-parser';
 
 import { Container } from './place-data.styles.jsx';
 
+import daysImg from '../../assets/icons/clock.svg';
 import emailImg from '../../assets/icons/email.svg';
 import phoneImg from '../../assets/icons/telefono.svg';
 import wwwImg from '../../assets/icons/world-wide-web.svg';
-import noInfo from '../../assets/img/scared.png';
 
-const PlaceData = ({ phone, email, web }) => {
-
-  const [isInformation, setIsInformation] = useState(true);
-
-  useEffect(() => {
-    (phone.length > 2 || email.length > 2 || web.length > 2) ? setIsInformation(true) : setIsInformation(false);
-  }, [phone]);
+const PlaceData = ({ days, phone, email, web }) => {
       
   return (
     <Container>
-      {isInformation ? <h3>Other information about this place:</h3> : <h3>Sorry, we don't have information about this place</h3>}
-      {isInformation ? null : <img className="placedata-noInfo" src={noInfo} alt="No Information" />}
+      <h3>Other information about this place:</h3>
+      {days ? <span className="placedata-category"><img className="placedata-icon" src={daysImg} alt="Visiting hours"/><p>Visiting hours: {days}</p></span> : null}
       {phone ? <span className="placedata-category"><img className="placedata-icon" src={phoneImg} alt="Phone"/><p>{phone}</p></span> : null}
       {email ? <span className="placedata-category"><img className="placedata-icon" src={emailImg} alt="Email"/>{parse(email)}</span> : null}
       {web ? <span className="placedata-category"><img className="placedata-icon" src={wwwImg} alt="Website"/>{parse(web)}</span> : null}
@@ -28,3 +22,8 @@ const PlaceData = ({ phone, email, web }) => {
 };
     
 export { PlaceData };
+
+/*
+      {isInformation ?  : <h3>Sorry, we don't have information about this place</h3>}
+      {isInformation ? null : <img className="placedata-noInfo" src={noInfo} alt="No Information" />}
+      */

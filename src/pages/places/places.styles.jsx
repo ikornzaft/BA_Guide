@@ -56,6 +56,25 @@ const DataContainer = styled.div`
     border-radius: 10px;
 `;
 
+const NoDataContainer = styled.div`
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0 1rem 0; 
+    & h3 {
+        color: ${colors.grey};
+        font-weight: 300;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+`;
+
+const NoDataImage = styled.img`
+  width: 25rem;
+  height: 15rem;
+`;
+
 const Data = styled.div`
     max-width: 30rem;
     height: 100%;
@@ -67,4 +86,4 @@ const Data = styled.div`
     background-color:red;
 `;
 
-export { Main, Container, Header, Title, Address, DataContainer, Data };
+export { Main, Container, Header, Title, Address, DataContainer, NoDataContainer, NoDataImage, Data };

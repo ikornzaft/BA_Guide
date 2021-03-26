@@ -16,7 +16,7 @@ const Card = ({ page, type, place }) => {
         </TitleContainer>
       </CardBody>
       <Footer>
-      <InfoButton location={place.id} text="+ Info">Info</InfoButton>
+      <InfoButton page={page} location={place.id} text="+ Info">Info</InfoButton>
       </Footer>
     </CardContainer>
     )

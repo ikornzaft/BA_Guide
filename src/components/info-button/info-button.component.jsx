@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import { Container, Text } from './info-button.styles';
 
-const InfoButton = ({ text, location }) => {
+const InfoButton = ({ page, text, location }) => {
     let history = useHistory();
     const handleClick = () => {
       history.push(`Places/${location}`)

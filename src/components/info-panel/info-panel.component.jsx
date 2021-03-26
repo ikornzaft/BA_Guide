@@ -8,8 +8,7 @@ const InfoPanel = (onClick) => {
 
   const infoPanel = 
   <Container>
-  <InfoPanelButton buttonSize='2' text='X' onClick={() => setInfoStatus(!InfoStatus)} />
-  Hola
+    <InfoPanelButton buttonSize='2' text='X' onClick={() => setInfoStatus(!InfoStatus)} />
   </Container>;
 
   return (
