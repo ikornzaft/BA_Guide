@@ -28,13 +28,8 @@ const Places = ({ match, history }) => {
 
   const res = useFetch(searchString, {});
 
-  function retrieveCoords(x, y) {
-    setCoordX(x);
-    setCoordY(y);
-  }
-
   const sortedData = useSortResponse(res.place);
-  const coordinates = useCoordinates(res.place, retrieveCoords);
+  useCoordinates(res.place, setCoordX, setCoordY);
 
   return (
     <Main>
