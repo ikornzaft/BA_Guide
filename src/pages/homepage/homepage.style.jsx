@@ -21,7 +21,21 @@ const Main = styled.main`
     justify-content: space-evenly;
     align-items: center;
     @media ${device.tablet} {
-            flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    }
+    @media ${device.laptop_small} {
+        max-width: 1000px;
+    }
+    @media ${device.laptop_large} {
+        max-width: 1700px;
+    }
+    @media ${device.desktop} {
+        max-width: 2000px;
+        padding-bottom: 1rem;
+    }
+    @media ${device.desktop_large} {
+        max-width: 2400px;
+        padding-bottom: 10rem;
     }
 `;
 
@@ -34,6 +48,27 @@ const TextSection = styled.section`
     @media ${device.tablet} {
         height: 38rem;
     }
+    @media ${device.laptop_small} {
+        margin-top: 0;
+        height: 30rem;
+        justify-content: flex-start;
+    }
+    @media ${device.laptop_large} {
+        margin-top: 3rem;
+        height: 40rem;
+        justify-content: flex-start;
+    }
+    @media ${device.desktop} {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        height: 60rem;
+        justify-content: flex-start;
+    }
+    @media ${device.desktop_large} {
+        margin-top: 2rem;
+        height: 60rem;
+        justify-content: center;
+    }
 `;
 
 const Header = styled.header`
@@ -45,6 +80,16 @@ const Header = styled.header`
     @media ${device.tablet} {
         background-color: ${colors.neutral_medium};
     }
+    @media ${device.laptop_large} {
+        height: 10rem;
+    }
+    @media ${device.desktop} {
+        height: 15rem;
+    }
+    @media ${device.desktop_large} {
+        height: 20rem;
+    }
+
 
     .header-kicker {
         margin: 1.2rem 0.9rem 0.3rem 0.9rem;
@@ -52,6 +97,12 @@ const Header = styled.header`
         font-size: 1.25rem;
         @media ${device.tablet} {
             font-size: 1.8rem;
+        }
+        @media ${device.desktop} {
+            font-size: 3rem;
+        }
+        @media ${device.desktop_large} {
+            font-size: 4rem;
         }
     }
     .header-title {
@@ -66,6 +117,12 @@ const Header = styled.header`
         @media ${device.laptop_small} {
             font-size: 2.3rem;
         }
+        @media ${device.desktop} {
+            font-size: 4rem;
+        }
+        @media ${device.desktop_large} {
+            font-size: 5rem;
+        }
     }
     .header-subtitle {
         font-size: 1.5rem;
@@ -77,6 +134,12 @@ const Header = styled.header`
         }
         @media ${device.tablet} {
             font-size: 1.7rem;
+        }
+        @media ${device.desktop} {
+            font-size: 3rem;
+        }
+        @media ${device.desktop_large} {
+            font-size: 3.7rem;
         }
     }
 `;
@@ -90,9 +153,24 @@ const TextContainer = styled.div`
         margin: 1rem;   
         font-weight: 300;
         @media ${device.tablet} {
-                font-weight: 100;
-               margin: 2rem 7rem 0 2rem;
+            font-weight: 100;
+            margin: 2rem 7rem 0 2rem;
             font-size: 1.4rem;
+        }
+        @media ${device.laptop_small} {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        @media ${device.desktop} {
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+        @media ${device.desktop_large} {
+            margin-top: 1rem;
+            margin-bottom: 5rem;
+            font-size: 2.5rem;
         }
     }
 `;
@@ -107,6 +185,16 @@ const ButtonContainer = styled.div`
         justify-content: flex-start;
         padding-left: 20rem;
     }
+    @media ${device.laptop_large} {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center;
+        margin-right: 2rem;
+    }
+    @media ${device.desktop} {
+        width: 30rem;
+        justify-content: flex-start;
+    }
 `;
 
 const IconsContainer = styled.div`
@@ -119,13 +207,21 @@ const IconsContainer = styled.div`
     margin-top: 0;
     gap: 0.2rem;
     @media ${device.tablet} {
-        //max-height: 35rem;
         margin-left: 1rem;
         justify-content: center;
         gap: 2rem;
-        //display: relative;
         height: 35rem;
         width: 35rem;
+    }
+    @media ${device.desktop} {
+        margin-top: 1rem;
+        padding-top: 2rem;
+        height: 45rem;
+    }
+    @media ${device.desktop_large} {
+        margin-top: 5rem;
+        padding-top: 5rem;
+        height: 70rem;
     }
 `;
 
@@ -148,6 +244,21 @@ const MapImage = styled.img`
         top: 0;
         opacity: 0.8;
         width: 35rem;
+    }
+    @media ${device.laptop_small} {
+        top: 0;
+        opacity: 0.8;
+        width: 30rem;
+    }
+    @media ${device.desktop} {
+        top: 0;
+        opacity: 0.8;
+        width: 45rem;
+    }
+    @media ${device.desktop_large} {
+        top: 10rem;
+        opacity: 0.8;
+        width: 65rem;
     }
 `;
 

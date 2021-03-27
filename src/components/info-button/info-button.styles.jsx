@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, secondaryFont } from '../../styled'
+import { colors, secondaryFont, device } from '../../styled'
 
 
 const Container = styled.div`

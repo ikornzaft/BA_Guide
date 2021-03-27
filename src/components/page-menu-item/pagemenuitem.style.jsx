@@ -22,6 +22,16 @@ const Container = styled.div`
         height: 10rem;
         width: 10rem;
     }
+    @media ${device.desktop} {
+        height: 15rem;
+        width: 15rem;
+        border-width: 7px;
+    }
+    @media ${device.desktop_large} {
+        height: 20rem;
+        width: 20rem;
+        border-width: 10px;
+    }
 `;
 
 const Image = styled.div`
@@ -56,6 +66,10 @@ const NameTag = styled.div`
         height: 2.2rem;
         width: 7rem;
     }
+    @media ${device.desktop} {
+        height: 3.2rem;
+        width: 12rem;
+    }
     ${Container}:hover & {
         opacity: 0.9;
     }
@@ -70,6 +84,9 @@ const NameText = styled.h3`
     }
     @media ${device.laptop_small} {
         font-size: 0.9rem;
+    }
+    @media ${device.desktop} {
+        font-size: 1.5rem;
     }
 `;
 

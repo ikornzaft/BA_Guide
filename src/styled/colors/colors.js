@@ -2,7 +2,7 @@ const colors = {
     neutral_light: "#F8F6FB",
     neutral_medium: "#EAEADA",
     blue_light: "#C2DAE7",
-    blue_medium: "#9FD3F0",
+    blue_medium: "#8CC2DF",
     blue: "#5890C0",
     blue_dark: "#445167",
     green_medium: "#8DC1AE",
