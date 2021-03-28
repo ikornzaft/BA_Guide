@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import parse from 'html-react-parser';
 
 import { Container } from './place-data.styles.jsx';
@@ -22,8 +22,3 @@ const PlaceData = ({ days, phone, email, web }) => {
 };
     
 export { PlaceData };
-
-/*
-      {isInformation ?  : <h3>Sorry, we don't have information about this place</h3>}
-      {isInformation ? null : <img className="placedata-noInfo" src={noInfo} alt="No Information" />}
-      */

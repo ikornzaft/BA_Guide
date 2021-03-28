@@ -24,11 +24,17 @@ const Container = styled.div`
         width: 9.5rem;
         border-radius: 10px;
     }
+    @media ${device.laptop_small} {
+        left: 3.7rem;
+    }
+    @media ${device.laptop_large} {
+        left: 4rem;
+    }
+    @media ${device.desktop} {
+        left: 5.5rem;
+    }
     @media ${device.desktop_large} {
-        top: 1rem;
-        left: 25rem;
-        width: 9.5rem;
-        border-radius: 10px;
+        left: 8.5rem;
     }
     &.scrolled {
         top: 0.2rem;

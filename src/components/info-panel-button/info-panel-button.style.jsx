@@ -14,6 +14,12 @@ const Container = styled.div`
     background-color: ${colors.blue};
     overflow: hidden;
     cursor: pointer;
+    @media ${device.laptop_large} {
+        transform: translateX(-150%);
+    }
+    @media ${device.desktop} {
+        transform: translateX(0);
+    }
     &:hover {
         transition: background-color 0.5s;
         background-color: ${colors.blue_medium};

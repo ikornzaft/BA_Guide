@@ -31,7 +31,6 @@ const Main = styled.main`
     }
     @media ${device.desktop} {
         max-width: 2000px;
-        padding-bottom: 1rem;
     }
     @media ${device.desktop_large} {
         max-width: 2400px;
@@ -164,7 +163,7 @@ const TextContainer = styled.div`
         }
         @media ${device.desktop} {
             margin-top: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             font-size: 2rem;
         }
         @media ${device.desktop_large} {
@@ -207,14 +206,18 @@ const IconsContainer = styled.div`
     margin-top: 0;
     gap: 0.2rem;
     @media ${device.tablet} {
+        margin-top: 1rem;
         margin-left: 1rem;
         justify-content: center;
         gap: 2rem;
         height: 35rem;
         width: 35rem;
     }
+    @media ${device.laptop_small} {
+        padding-top: 2rem;
+        height: 30rem;
+    }
     @media ${device.desktop} {
-        margin-top: 1rem;
         padding-top: 2rem;
         height: 45rem;
     }
@@ -246,18 +249,13 @@ const MapImage = styled.img`
         width: 35rem;
     }
     @media ${device.laptop_small} {
-        top: 0;
-        opacity: 0.8;
         width: 30rem;
     }
     @media ${device.desktop} {
-        top: 0;
-        opacity: 0.8;
         width: 45rem;
     }
     @media ${device.desktop_large} {
         top: 10rem;
-        opacity: 0.8;
         width: 65rem;
     }
 `;
