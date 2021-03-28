@@ -24,6 +24,12 @@ const Container = styled.div`
         width: 9.5rem;
         border-radius: 10px;
     }
+    @media ${device.desktop_large} {
+        top: 1rem;
+        left: 25rem;
+        width: 9.5rem;
+        border-radius: 10px;
+    }
     &.scrolled {
         top: 0.2rem;
         @media ${device.tablet} {

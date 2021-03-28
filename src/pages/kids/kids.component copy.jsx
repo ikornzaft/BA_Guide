@@ -6,24 +6,34 @@ import { CardList, Footer, Header, Loader } from '../../components'
 
 import wrong from '../../assets/img/Something-Went-Wrong.svg';
 
+const searchString = "https://epok.buenosaires.gob.ar/buscar?texto=chicos&clase=actividades_para_chicos%7C1"
+
 const Kids = () => {
-    const searchString = "https://epok.buenosaires.gob.ar/buscar?texto=chicos&clase=actividades_para_chicos%7C1"
-    const res = useFetch(searchString, {});
+    const [places, fetchedPlaces] = useState([]);
+    const [placesList, filteredPlaces] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
-    const [filteredPlaces, setFilteredPlaces] = useState(null);
+
     const updateSearchQuery = (input) => setSearchQuery(input);
+    
+    useEffect(() => {
+        const fetchFunc = async () => {
+            const response = await fetch(searchString);
+            const resJson = await response.json();
+            fetchedPlaces(resJson.instancias);
+            filteredPlaces(resJson.instancias);
+        };
+        fetchFunc();
+    }, []);
 
     useEffect(() => {
-        if (res.places) setFilteredPlaces(res.places.filter(place => place.nombre.toLowerCase().includes(searchQuery.toLowerCase())));
+        searchQuery ? filteredPlaces(places.filter(place => place.nombre.toLowerCase().includes(searchQuery.toLowerCase()))) : filteredPlaces(places)
     }, [searchQuery]);
 
     return (
         <Container>
         <Header searchQuery={searchQuery} updateSearchQuery={updateSearchQuery} kicker="Great Places To" title="VISIT WITH KIDS"/>
             <Main>
-                {res.loading ? <Loader /> : null}
-                {res.error ? <ErrorImage src={wrong} alt="Something went wrong" /> : null}
-                {res.places ? <CardList page="kids" places={filteredPlaces ? filteredPlaces : res.places} /> : null}
+                <CardList page="kids" places={placesList} />
             </Main>
             <Footer />
         </Container>

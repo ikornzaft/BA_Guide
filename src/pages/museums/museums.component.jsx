@@ -12,14 +12,14 @@ const Museums = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredPlaces, setFilteredPlaces] = useState(null);
     const updateSearchQuery = (input) => setSearchQuery(input);
-    
+
     useEffect(() => {
         if (res.places) setFilteredPlaces(res.places.filter(place => place.nombre.toLowerCase().includes(searchQuery.toLowerCase())));
     }, [searchQuery]);
 
     return (
         <Container>
-            <Header searchQuery={searchQuery} updateSearchQuery={updateSearchQuery} kicker="Buenos Aires City's" title="MUSEUMS"/>
+            <Header searchQuery={searchQuery} updateSearchQuery={updateSearchQuery} kicker="Buenos Aires City's" title="MUSEUMS" />
             <Main>
                 {res.loading ? <Loader /> : null}
                 {res.error ? <ErrorImage src={wrong} alt="Something went wrong" /> : null}
@@ -28,6 +28,6 @@ const Museums = () => {
             <Footer />
         </Container>
     );
-} 
-  
+}
+
 export { Museums };
