@@ -27,9 +27,9 @@ const InfoPanel = (onClick) => {
     <br/>
     <p className="info-text">Ignacio.</p>
     <IconContainer>
-      <a href="https://twitter.com/ikornzaft" class="fa fa-twitter"></a>
-      <a href="https://www.instagram.com/codezaft/" class="fa fa-instagram"></a>
-      <a href="https://github.com/ikornzaft" class="fa fa-github"></a>
+      <a aria-label="Twitter Link" href="https://twitter.com/ikornzaft" class="fa fa-twitter">{null}</a>
+      <a aria-label="Instagram Link" href="https://www.instagram.com/codezaft/" class="fa fa-instagram">{null}</a>
+      <a aria-label="Github Link" href="https://github.com/ikornzaft" class="fa fa-github">{null}</a>
     </IconContainer>
   </Container>;
   

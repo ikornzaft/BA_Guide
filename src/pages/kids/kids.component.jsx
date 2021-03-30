@@ -11,16 +11,26 @@ const Kids = () => {
     const res = useFetch(searchString, {});
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredPlaces, setFilteredPlaces] = useState(null);
+    const [scrolled, setScrolled] = useState(false);
     const updateSearchQuery = (input) => setSearchQuery(input);
 
     useEffect(() => {
         if (res.places) setFilteredPlaces(res.places.filter(place => place.nombre.toLowerCase().includes(searchQuery.toLowerCase())));
     }, [searchQuery]);
 
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        offset > 200 ? setScrolled(true) : setScrolled(false);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    });
+
     return (
         <Container>
-        <Header searchQuery={searchQuery} updateSearchQuery={updateSearchQuery} kicker="Great Places To" title="VISIT WITH KIDS"/>
-            <Main>
+        <Header scrolled={scrolled} searchQuery={searchQuery} updateSearchQuery={updateSearchQuery} kicker="Great Places To" title="VISIT WITH KIDS"/>
+            <Main className={scrolled ? "main scrolled" : "main"}>
                 {res.loading ? <Loader /> : null}
                 {res.error ? <ErrorImage src={wrong} alt="Something went wrong" /> : null}
                 {res.places ? <CardList page="kids" places={filteredPlaces ? filteredPlaces : res.places} /> : null}

@@ -16,6 +16,9 @@ const Main = styled.main`
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    &.scrolled {
+      padding-top: 14rem;
+    }
 `;
 
 const ErrorImage = styled.img`
