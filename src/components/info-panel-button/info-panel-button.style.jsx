@@ -7,14 +7,15 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2.5rem;
+    min-height: 2.2rem;
     width: ${props => props.buttonSize}rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border-radius: 10px;
     background-color: ${colors.blue};
     overflow: hidden;
     cursor: pointer;
     @media ${device.laptop_large} {
+        margin-bottom: 2rem;
         transform: translateX(-150%);
     }
     @media ${device.desktop} {
