@@ -4,7 +4,7 @@ import { PageFooter } from './footer.styles';
 
 const Footer = () => (
     <PageFooter>
-        <span className="madeBy">Made by Ignacio Kornzaft | CODEZAFT</span>
+        <span className="madeBy">Made by <a className="footer-link" href="https://github.com/ikornzaft">Ignacio Kornzaft</a> | CODEZAFT</span>
     </PageFooter>
 );
 

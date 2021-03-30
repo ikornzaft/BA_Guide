@@ -25,6 +25,20 @@ const PageFooter = styled.footer`
             font-size: 1.5rem;
         }
     }
+    .footer-link {
+        font-size: 0.7rem;
+        text-decoration: none;
+        color: ${colors.blue};
+        &:hover {
+            color: ${colors.blue_medium};
+        }
+        @media ${device.desktop} {
+            font-size: 1rem;
+        }
+        @media ${device.desktop_large} {
+            font-size: 1.5rem;
+        }
+    }
 `;
 
 export { PageFooter };
