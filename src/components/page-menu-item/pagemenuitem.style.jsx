@@ -75,10 +75,14 @@ const NameTag = styled.div`
     }
 `;
 
-const NameText = styled.h3`
+const NameText = styled.button`
     font-family: ${secondaryFont};
     font-size: 0.6rem;
     font-weight: 100;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
     @media ${device.tablet} {
         font-size: 0.9rem;
     }
@@ -87,6 +91,10 @@ const NameText = styled.h3`
     }
     @media ${device.desktop} {
         font-size: 1.5rem;
+    }
+    &:focus {
+        outline: none;
+        text-decoration: underline ${colors.grey};
     }
 `;
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors, secondaryFont } from '../../styled'
 
 
-const Container = styled.div`
+const Container = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +12,11 @@ const Container = styled.div`
     background-color: ${colors.neutral_light};
     overflow: hidden;
     cursor: pointer;
+    border: 0;
+    &:focus {
+        outline: none;
+        text-decoration: underline ${colors.grey};
+    }
     &:hover {
         transition: background-color 0.5s;
         background-color: ${colors.blue_light};

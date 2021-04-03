@@ -32,6 +32,10 @@ const PageFooter = styled.footer`
         &:hover {
             color: ${colors.blue_medium};
         }
+        &:focus {
+            outline: none;
+            text-decoration: underline ${colors.blue};
+        }
         @media ${device.desktop} {
             font-size: 1rem;
         }

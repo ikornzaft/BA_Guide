@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors, secondaryFont, device } from '../../styled'
 
 
-const Container = styled.div`
+const Container = styled.button`
     position: absolute;
     z-index: 40;
     top: 0.4rem;
@@ -18,6 +18,11 @@ const Container = styled.div`
     background-color: ${colors.blue};
     overflow: hidden;
     cursor: pointer;
+    border: none;
+    &:focus {
+        outline: none;
+        text-decoration: underline ${colors.neutral_light};
+    }
     @media ${device.tablet} {
         top: 1rem;
         left: 8rem;

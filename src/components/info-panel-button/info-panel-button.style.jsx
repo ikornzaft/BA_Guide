@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors, secondaryFont, device } from '../../styled'
 
 
-const Container = styled.div`
+const Container = styled.button`
     align-self: flex-end;
     display: flex;
     align-items: center;
@@ -14,6 +14,11 @@ const Container = styled.div`
     background-color: ${colors.blue};
     overflow: hidden;
     cursor: pointer;
+    &:focus {
+        outline: none;
+        border: none;
+        text-decoration: underline ${colors.neutral_light};
+    }
     @media ${device.laptop_large} {
         margin-bottom: 2rem;
         transform: translateX(-150%);
