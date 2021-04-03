@@ -60,12 +60,12 @@ const TextSection = styled.section`
     @media ${device.desktop} {
         margin-top: 2rem;
         padding-top: 2rem;
-        height: 60rem;
+        height: 50rem;
         justify-content: flex-start;
     }
     @media ${device.desktop_large} {
         margin-top: 2rem;
-        height: 60rem;
+        height: 50rem;
         justify-content: center;
     }
 `;
@@ -222,7 +222,7 @@ const IconsContainer = styled.div`
         height: 45rem;
     }
     @media ${device.desktop_large} {
-        margin-top: 5rem;
+        margin-top: 1rem;
         padding-top: 5rem;
         height: 70rem;
     }
