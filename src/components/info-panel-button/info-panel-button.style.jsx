@@ -14,9 +14,9 @@ const Container = styled.button`
     background-color: ${colors.blue};
     overflow: hidden;
     cursor: pointer;
+    border: none;
     &:focus {
         outline: none;
-        border: none;
         text-decoration: underline ${colors.neutral_light};
     }
     @media ${device.laptop_large} {
