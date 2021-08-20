@@ -1,6 +1,6 @@
 # Buenos Aires Guide
 
-An small web app that retrieves data from the Buenos Aires City's API.
+A small web app that retrieves data from Buenos Aires City's API.
 
 Made in plain JavaScript and HTML/CSS (Styled Components).
 
